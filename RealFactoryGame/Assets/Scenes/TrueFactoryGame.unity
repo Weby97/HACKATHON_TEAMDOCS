@@ -153,8 +153,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 966632412}
-  - {fileID: 6689588337989649808}
-  - {fileID: 7796759978596143451}
   - {fileID: 1422877748}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -646,7 +644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 660739109}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1422877749
 CapsuleCollider:
@@ -784,6 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a11cfeff61f4d0eb16c59c62682447, type: 3}
+<<<<<<< HEAD
 --- !u!1 &2136358558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,3 +1086,5 @@ Transform:
   m_Father: {fileID: 660739109}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 993e4fd5d31125de63081283f545c7aa1b2b436d
