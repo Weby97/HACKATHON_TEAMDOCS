@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Music_Plsying : MonoBehaviour
 {
+    public Time T_ime;
     // Start is called before the first frame update
     void Start()
     {
