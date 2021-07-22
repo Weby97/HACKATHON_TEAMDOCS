@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : MonoBehaviour
+public class turret_behaveyor : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject zombert;
+    public bool active = true;
+    public bool sleeping = true;
+
+    public int health = 200;
+
+    public GameObject self;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +20,9 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        zombert.transform.position = Vector3.MoveTowards(zombert.transform.position, player.transform.position, 10);
+        if (health == 0)
+        {
+            Destroy(self);
+        }
     }
 }
