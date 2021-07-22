@@ -13,8 +13,6 @@ public class time : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            yield return new WaitForSeconds(15);
-
         
     }
     // Update is called once per frame
