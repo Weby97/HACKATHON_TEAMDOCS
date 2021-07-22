@@ -18,7 +18,7 @@ public class bad_to_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        body.transform.position = new Vector3(agent.nextPosition.x,agent.transform.position.y+1,agent.nextPosition.z);
+        body.transform.position = new Vector3(agent.nextPosition.x,agent.transform.position.y,agent.nextPosition.z);
         agent.SetDestination(target.transform.position);
         agent.speed = speed;
     }
