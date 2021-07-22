@@ -10,7 +10,6 @@ public class Music_Plsying : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
