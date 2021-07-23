@@ -33,7 +33,7 @@ public class interaction : MonoBehaviour
             StartCoroutine(wait(5));
         }
         active = false;
-        if (active)
+        if (Input.GetKey("e"))
         {
             Debug.Log("E...");
         }

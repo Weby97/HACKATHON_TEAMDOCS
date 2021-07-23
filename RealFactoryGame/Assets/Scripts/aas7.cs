@@ -50,12 +50,9 @@ public class aas7 : MonoBehaviour
 
         if (Physics.Raycast(ray1, out hit1))
         {
-            if (hit1.transform.gameObject.tag == "plrInteract" && Input.GetKey("e"))
+            if (hit1.transform.gameObject.tag == "plrInteract")
             {
-                if (hit1.transform.gameObject.GetComponent<interaction>().type == "E")
-                {
-                    hit1.transform.gameObject.GetComponent<interaction>().active = true;
-                }
+                hit1.transform.gameObject.GetComponent<interaction>().active = true;
             }
         }
 

@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 4754171820231286079}
   m_Layer: 0
   m_Name: interaction
-  m_TagString: plr
+  m_TagString: plrInteract
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
