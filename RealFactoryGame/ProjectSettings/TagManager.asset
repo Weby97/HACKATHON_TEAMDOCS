@@ -6,6 +6,7 @@ TagManager:
   tags:
   - plr
   - plrInteract
+  - buildInteract
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class ShooterScript : MonoBehaviour
     public float timeBetweenShots = 0.2f;
     public float shotsFired = 0;
     public bool needReload = false;
+    public GameObject camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class ShooterScript : MonoBehaviour
             canShoot = false;
             shotsFired++;
             timeUntilNextShot = Time.time + timeBetweenShots;
-            Instantiate(bullet, this.transform.position, this.transform.rotation);
+            Instantiate(bullet, transform.position, camera.transform.rotation);
             if (shotsFired >= 10)
             {
                 needReload = true;

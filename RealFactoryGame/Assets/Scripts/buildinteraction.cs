@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class interaction : MonoBehaviour
+public class buildinteraction : MonoBehaviour
 {
     public bool active;
     private bool isInTimer = false;
+    public GameObject ui;
+    public Vector3 hitpoint;
 
     void Update()
     {
@@ -22,9 +24,9 @@ public class interaction : MonoBehaviour
     } 
     void timedUpdate()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("E...");
+            Debug.Log("click...");
         }
         active = false;
         StartCoroutine(wait(0.1232f));

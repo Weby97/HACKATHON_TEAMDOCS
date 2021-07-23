@@ -45,14 +45,25 @@ public class aas7 : MonoBehaviour
         bool isRunning = (Input.GetKey(KeyCode.LeftControl));
         bool isShifting = IntToBool((int)((BoolToInt(Input.GetKey(KeyCode.LeftAlt)))*BoolToInt(!isShiftable))+(BoolToInt(Input.GetKey(KeyCode.LeftShift))*BoolToInt(isShiftable)));
 
+        RaycastHit hit;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.gameObject.tag == "plrInteract")
+            {
+                hit.transform.gameObject.GetComponent<interaction>().active = true;
+            }
+        }
+
         RaycastHit hit1;
         var ray1 = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray1, out hit1))
         {
-            if (hit1.transform.gameObject.tag == "plrInteract")
+            if (hit1.transform.gameObject.tag == "buildInteract")
             {
-                hit1.transform.gameObject.GetComponent<interaction>().active = true;
+                hit1.transform.gameObject.GetComponent<buildinteraction>().active = true;
             }
         }
 
