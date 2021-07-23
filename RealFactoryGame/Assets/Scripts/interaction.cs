@@ -33,13 +33,9 @@ public class interaction : MonoBehaviour
             StartCoroutine(wait(5));
         }
         active = false;
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "plr" && type == "C")
+        if (active)
         {
-            isInColide = true;
-            Debug.Log("fgdgdf");
+            Debug.Log("E...");
         }
     }
 }
