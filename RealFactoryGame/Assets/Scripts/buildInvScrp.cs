@@ -10,6 +10,7 @@ public class buildInvScrp : MonoBehaviour
     
     public int index = 0;
     public bool idaho;
+    public bool ciri;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,14 @@ public class buildInvScrp : MonoBehaviour
             for (int i = 0; i < items.Length; i++)
             {
                 items[i].update();
+            }
+
+            if (items[i].ammount>0)
+            {
+                ciri = true;
+            }else
+            {
+                ciri = !true;
             }
         }
     }

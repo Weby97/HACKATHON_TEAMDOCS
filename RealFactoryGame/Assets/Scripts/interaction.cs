@@ -5,11 +5,12 @@ using UnityEngine;
 public class interaction : MonoBehaviour
 {
     public bool active;
+    public bool enabled = true;
     private bool isInTimer = false;
 
     void Update()
     {
-        if (!isInTimer && active)
+        if (!isInTimer && active && enabled)
         {
             timedUpdate();
         }
