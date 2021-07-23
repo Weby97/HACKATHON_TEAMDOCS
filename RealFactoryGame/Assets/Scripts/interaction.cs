@@ -5,19 +5,16 @@ using UnityEngine;
 public class interaction : MonoBehaviour
 {
     public bool active;
-    public string type = "E";
+    private bool isInTimer = false;
 
-    private bool isInTimer;
-    private bool isInColide;
-
-    void FixedUpdate()
+    void Update()
     {
-        if (!isInTimer && (isInColide || type == "E"))
+        if (!isInTimer)
         {
             timedUpdate();
         }
     }
-    IEnumerator wait(int time)
+    IEnumerator wait(float time)
     {
         isInTimer = true;
         yield return new WaitForSeconds(time);
@@ -25,17 +22,14 @@ public class interaction : MonoBehaviour
     } 
     void timedUpdate()
     {
-        if (type == "E")
-        {
-            StartCoroutine(wait(2));
-        }else if (type == "C")
-        {
-            StartCoroutine(wait(5));
-        }
-        active = false;
         if (Input.GetKey("e"))
         {
             Debug.Log("E...");
+            active = true;
+        }else
+        {
+            active = !true;
         }
+        StartCoroutine(wait(0.1232f));
     }
 }
