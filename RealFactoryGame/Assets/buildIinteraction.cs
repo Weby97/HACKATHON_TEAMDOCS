@@ -22,10 +22,10 @@ public class buildIinteraction : MonoBehaviour
             interaction.active = false;
             interaction.enabled = false;
 
-            if (buildscript.crci)
+            if (buildscript.ciri)
             {
                 buildscript.removeCurrentItem();
-                Instantiate(buildscript.currentItem(), safepoint.transform.position, Quaternion.identity);
+                Instantiate(buildscript.currentItem().main, safePoint.transform.position, Quaternion.identity);
             }
         }    
     }

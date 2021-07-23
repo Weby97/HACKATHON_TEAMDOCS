@@ -38,7 +38,7 @@ public class buildInvScrp : MonoBehaviour
                 items[i].update();
             }
 
-            if (items[i].ammount>0)
+            if (items[index].ammount>0)
             {
                 ciri = true;
             }else
